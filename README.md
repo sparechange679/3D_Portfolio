@@ -1,16 +1,46 @@
-# React + Vite
+# 3D Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern 3D portfolio built with React, Vite, Tailwind CSS, and Three.js to showcase skills, projects, and experience in an immersive, interactive experience.
 
-Currently, two official plugins are available:
+![3D Portfolio preview](./screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Interactive 3D hero scene and animated UI
+- Responsive portfolio layout for desktop and mobile
+- Experience, timeline, and project showcase sections
+- Tech stack and client/logo highlights
+- Contact form integration
+- Lightweight React + Vite setup for fast development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Tailwind CSS
+- Three.js
+- React Three Fiber
+- GSAP
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Production Build
+
+```bash
+npm run build
+```
+
+## Preview
+
+```bash
+npm run preview
+```
+
+## Screenshot
+
+The project preview is shown above and is stored at the root as `screenshot.png`.
