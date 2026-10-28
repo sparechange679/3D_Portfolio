@@ -53,32 +53,32 @@ const AppShowcase = () => {
                         </div>
                         <div className="text-content">
                             <h2>
-                                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                                called Ryde
+                                JobPilot is an AI-powered job hunting assistant for developers
                             </h2>
                             <p className="text-white-50 md:text-xl">
-                                An app built with React Native, Expo, & TailwindCSS for a fast,
-                                user-friendly experience.
+                                It helps users create a profile, upload a resume,
+                                discover relevant jobs, score them against their skills,
+                                and research companies before applying.
                             </p>
                         </div>
                     </div>
 
                     <div className="project-list-wrapper overflow-hidden">
                         <div className="project" ref={libraryRef}>
-                            <div className="image-wrapper bg-[#FFEFDB]">
+                            <div className="image-wrapper bg-[#FFE7EB]">
                                 <img
                                     src="/images/project2.png"
-                                    alt="Library Management Platform"
+                                    alt="MacOS portfolio"
                                 />
                             </div>
-                            <h2>The Library Management Platform</h2>
+                            <h2>A sleek, interactive macOS-inspired portfolio website built with React, Vite, and GSAP</h2>
                         </div>
 
                         <div className="project" ref={ycDirectoryRef}>
-                            <div className="image-wrapper bg-[#FFE7EB]">
+                            <div className="image-wrapper bg-[#FFEFDB]">
                                 <img src="/images/project3.png" alt="YC Directory App"/>
                             </div>
-                            <h2>YC Directory - A Startup Showcase App</h2>
+                            <h2>Next App-Router Fundamentals Certificate</h2>
                         </div>
                     </div>
                 </div>
