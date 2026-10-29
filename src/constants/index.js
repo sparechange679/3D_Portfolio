@@ -171,7 +171,7 @@ const expCards = [
         ],
     },
     {
-        review: "Blessings' work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+        review: "Blessings' work on Appwrite's mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
         imgPath: "/images/exp3.png",
         logoPath: "/images/logo3.png",
         title: "React Native Developer",
@@ -201,45 +201,45 @@ const expLogos = [
 
 const testimonials = [
     {
-        name: "Esther Howard",
-        mentions: "@estherhoward",
+        name: "Miss Mwausegha",
+        mentions: "@asikiara",
         review:
-            "I can’t say enough good things about Blessings. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+            "Blessings was able write a database that was able to handle large amounts of data and perform complex queries efficiently whilst taking into considerations to security and authorization.",
         imgPath: "/images/client1.png",
     },
     {
-        name: "Wade Warren",
-        mentions: "@wadewarren",
+        name: "Mr Kachale",
+        mentions: "@kachale",
         review:
-            "Working with Blessings was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+            "Blessings is a bright child with a bright future, He is a great student whose experience is not limited to web development but also Networking and IoT. He was able to install security cameras in my home all on his own.",
         imgPath: "/images/client3.png",
     },
     {
-        name: "Guy Hawkins",
-        mentions: "@guyhawkins",
+        name: "Mrs Funsani",
+        mentions: "@funsani",
         review:
-            "Collaborating with Blessings was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Blessings enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Blessings is the ideal partner.",
+            "Blessings was a great student when it comes to Web development. As his previous project, he came up with complex project and was able to deliver all the necessary requirements by building a seamless, functional website which showcased his problem-solving abilities in handling large task.",
         imgPath: "/images/client2.png",
     },
     {
-        name: "Marvin McKinney",
-        mentions: "@marvinmckinney",
+        name: "Vanessa Kachisa",
+        mentions: "@kachisavane",
         review:
-            "Blessings was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
+            "Blessings was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that's both modern and easy to navigate. Fantastic work overall.",
         imgPath: "/images/client5.png",
     },
     {
-        name: "Floyd Miles",
-        mentions: "@floydmiles",
+        name: "Prince Kamanga",
+        mentions: "@kamanga",
         review:
-            "Blessings' expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
+            "Blessings and I worked together to create a robust and scalable web app called zintasa for taxi services in Mzuzu, Malawi. The app was a huge success and helped us increase our online presence.",
         imgPath: "/images/client4.png",
     },
     {
-        name: "Albert Flores",
-        mentions: "@albertflores",
+        name: "Violet Mzanga",
+        mentions: "@vimzanga",
         review:
-            "Blessings was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
+            "Blessings is great in PR review and has a great eye for detail. He can quickly identify issues and provide constructive feedback to improve the quality of our code.",
         imgPath: "/images/client6.png",
     },
 ];
@@ -248,18 +248,22 @@ const socialImgs = [
     {
         name: "insta",
         imgPath: "/images/insta.png",
+        link: "https://www.instagram.com/blessings_yeager/",
     },
     {
         name: "fb",
         imgPath: "/images/fb.png",
+        link: "",
     },
     {
-        name: "x",
-        imgPath: "/images/x.png",
+        name: "Github",
+        imgPath: "/images/github.png",
+        link: "https://github.com/sparechange679",
     },
     {
         name: "linkedin",
         imgPath: "/images/linkedin.png",
+        link: "https://www.linkedin.com/in/blessings-sabuni-kishindo-3156b529a/",
     },
 ];
 
