@@ -1,52 +1,55 @@
-import {useRef, useMemo} from "react";
-import {useFrame} from "@react-three/fiber";
+import { useRef, useLayoutEffect } from "react";
+import { useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 
-const Particles = ({count = 200}) => {
+const randomHeight = () => Math.random() * 10 + 5; // higher starting point
+
+// Imperative per-frame update lives outside the component on purpose:
+// it mutates Three.js buffers, which is expected for animation.
+const updateParticles = (geometry, speeds, count) => {
+    const attr = geometry.attributes.position;
+    if (!attr || !speeds) return;
+
+    const positions = attr.array;
+    for (let i = 0; i < count; i++) {
+        let y = positions[i * 3 + 1] - speeds[i];
+        if (y < -2) y = randomHeight();
+        positions[i * 3 + 1] = y;
+    }
+    attr.needsUpdate = true;
+};
+
+const Particles = ({ count = 200 }) => {
     const mesh = useRef();
+    const speeds = useRef(null);
 
-    const particles = useMemo(() => {
-        const temp = [];
+    useLayoutEffect(() => {
+        const positions = new Float32Array(count * 3);
+        const particleSpeeds = new Float32Array(count);
+
         for (let i = 0; i < count; i++) {
-            temp.push({
-                position: [
-                    (Math.random() - 0.5) * 10,
-                    Math.random() * 10 + 5, // higher starting point
-                    (Math.random() - 0.5) * 10,
-                ],
-                speed: 0.005 + Math.random() * 0.001,
-            });
+            positions[i * 3] = (Math.random() - 0.5) * 10;
+            positions[i * 3 + 1] = randomHeight();
+            positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+            particleSpeeds[i] = 0.005 + Math.random() * 0.001;
         }
-        return temp;
+
+        speeds.current = particleSpeeds;
+        mesh.current.geometry.setAttribute(
+            "position",
+            new THREE.BufferAttribute(positions, 3)
+        );
     }, [count]);
 
     useFrame(() => {
-        const positions = mesh.current.geometry.attributes.position.array;
-        for (let i = 0; i < count; i++) {
-            let y = positions[i * 3 + 1];
-            y -= particles[i].speed;
-            if (y < -2) y = Math.random() * 10 + 5;
-            positions[i * 3 + 1] = y;
+        if (mesh.current) {
+            updateParticles(mesh.current.geometry, speeds.current, count);
         }
-        mesh.current.geometry.attributes.position.needsUpdate = true;
-    });
-
-    const positions = new Float32Array(count * 3);
-    particles.forEach((p, i) => {
-        positions[i * 3] = p.position[0];
-        positions[i * 3 + 1] = p.position[1];
-        positions[i * 3 + 2] = p.position[2];
     });
 
     return (
-        <points ref={mesh}>
-            <bufferGeometry>
-                <bufferAttribute
-                    attach="attributes-position"
-                    count={count}
-                    array={positions}
-                    itemSize={3}
-                />
-            </bufferGeometry>
+        <points ref={mesh} frustumCulled={false}>
+            <bufferGeometry />
             <pointsMaterial
                 color="#ffffff"
                 size={0.05}
