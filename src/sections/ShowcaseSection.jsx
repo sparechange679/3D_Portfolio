@@ -71,7 +71,7 @@ const AppShowcase = () => {
                                     alt="MacOS portfolio"
                                 />
                             </div>
-                            <h2>A sleek, interactive macOS-inspired portfolio website built with React, Vite, and GSAP</h2>
+                            <h2>Bachelor of Science (Hons) in Computing</h2>
                         </div>
 
                         <div className="project" ref={ycDirectoryRef}>
